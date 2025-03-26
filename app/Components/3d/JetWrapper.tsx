@@ -12,7 +12,7 @@ const Jet = dynamic(() => import('@/app/Components/3d/Canvas'), {
 
 export default function JetWrapper() {
   return (
-    <div className="absolute 2xl:left-150 top-25 xl:flex hidden z-20 overflow-visible">
+    <div className="absolute 2xl:left-150 top-25 xl:flex hidden overflow-visible pointer-events-none">
       <Jet />
     </div>
   );

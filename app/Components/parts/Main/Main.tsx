@@ -11,6 +11,8 @@ import JetWrapper from '../../3d/JetWrapper';
 export default function Main() {
     return (
         <main className='w-screen'>
+
+
             <SectionWrapper className='w-full flex flex-col pt-14 gap-5 px-5 sm:pt-24 sm:justify-end sm:items-end sm:gap-12 lg:pr-12 xl:h-[60vh]'>
 
                 <div className='flex flex-col gap-5 '>
@@ -191,8 +193,8 @@ export default function Main() {
                     </Link>
                 </div>
             </div>
-
             <JetWrapper />
+
 
         </main>
     )
