@@ -1,7 +1,7 @@
-"use client";
+"use client"
 
 import React, { useRef, useState } from "react";
-import { Canvas, useFrame, extend } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 import { Suspense } from "react";
 import * as THREE from "three";
@@ -9,7 +9,7 @@ import { EffectComposer, Bloom } from "@react-three/postprocessing";
 
 // Étendre les effets de post-traitement
 
-function Model() {
+export default function Model() {
   const gltf = useGLTF("/lowPolyJet.gltf");
   const modelRef = useRef<THREE.Object3D | null>(null);
   const mouse = useRef({ x: 0, y: 0 });
@@ -95,7 +95,7 @@ function Model() {
     <primitive
       ref={modelRef}
       object={gltf.scene}
-      scale={[1, 1, 1]}
+      scale={[1.5, 1.5, 1.5]}
       position={[0, 0, 0]}
       castShadow
       receiveShadow
@@ -103,37 +103,3 @@ function Model() {
   );
 }
 
-export default function Jet() {
-  return (
-    <div className="flex flex-col gap-5">
-      <Canvas
-        style={{ height: "50vh", width: "50vw", background: "#ffffff" }}
-        camera={{ position: [0, 5, 10], fov: 50 }}
-        shadows
-        gl={{ antialias: true }}
-      >
-        <ambientLight intensity={0.3} color="#87CEEB" />
-        <directionalLight
-          position={[5, 8, 5]}
-          intensity={6.0}
-          color="#ffffff"
-          castShadow
-          shadow-mapSize-width={2048}
-          shadow-mapSize-height={2048}
-          shadow-bias={-0.0001}
-        />
-        <pointLight position={[0, 3, 2]} intensity={80} color="#4169E1" distance={20} decay={2} />
-        <pointLight position={[0, 5, -5]} intensity={50} color="#87CEEB" distance={15} decay={2} />
-
-        <Suspense fallback={null}>
-          <Model />
-        </Suspense>
-
-        <EffectComposer>
-          <Bloom intensity={0.5} luminanceThreshold={0.8} luminanceSmoothing={0.1} />
-        </EffectComposer>
-      </Canvas>
-      <h1>514Jet</h1>
-    </div>
-  );
-}

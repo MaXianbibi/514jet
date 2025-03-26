@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #EEEEEF;
+  --box: #F5F5F5;
+  --foreground: #1A1A1A;
+  --link: #126ce0;
+  --sub: #8792a3;
 }
 /* 
 @theme inline {
@@ -23,4 +26,28 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+
+}
+/* Style global pour la barre de défilement */
+body::-webkit-scrollbar {
+  width: 5px; /* Largeur de la barre */
+}
+
+/* Le fond de la barre de défilement */
+body::-webkit-scrollbar-track {
+  background: transparent;  /* Couleur de fond sombre */
+  border-radius: 10px;  /* Coins arrondis */
+}
+
+/* La "thumb", c'est-à-dire le curseur qu'on déplace */
+body::-webkit-scrollbar-thumb {
+  background-color: #333;  /* Couleur du curseur */
+  border-radius: 10px;     /* Coins arrondis */
+  border: 2px solid #1a1a1a; /* Ajout d'un espace entre le curseur et le fond pour plus d'effet */
+
+}
+
+/* Ajout d'un léger effet au survol */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555;  /* Couleur légèrement plus claire quand on passe la souris */
 }

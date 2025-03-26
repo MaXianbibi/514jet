@@ -1,10 +1,10 @@
-import Jet from '@/app/Components/3d/Jet';
-import { Suspense } from 'react'
+import Jet from './Components/3d/Jet';
+import Main from './Components/parts/Main/Main';
 
 export default function Home() {
   return (
-    <div className='w-screen h-screen flex justify-center items-center'>
-        <Jet />
+    <div className='h-fit w-screen'>
+      <Main/>
     </div>
   );
 }
