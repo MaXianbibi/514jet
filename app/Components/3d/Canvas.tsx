@@ -7,6 +7,9 @@ import { Suspense } from "react";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import Model from "./Jet";
 
+
+
+
 export default function Jet() {
     return (
       <div className="flex flex-col gap-5 absolute z-10 overflow-visible  ">
@@ -15,6 +18,7 @@ export default function Jet() {
           camera={{ position: [0, 5, 10], fov: 60 }}
           shadows
           gl={{ antialias: true }}
+          performance={{ max: 1, min: 0.1 }}
         >
           <ambientLight intensity={0.3} color="#87CEEB" />
           <directionalLight

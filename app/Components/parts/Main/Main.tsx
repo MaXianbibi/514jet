@@ -4,12 +4,11 @@ import { FaLocationDot } from "react-icons/fa6";
 import Link from 'next/link';
 import ArrowOutward from '@/public/svg-arrow-outward.svg'
 import Image from 'next/image';
-import Jet from '@/app/Components/3d/Canvas'
+import JetWrapper from '../../3d/JetWrapper';
+
 
 
 export default function Main() {
-
-
     return (
         <main className='w-screen'>
             <SectionWrapper className='w-full flex flex-col pt-14 gap-5 px-5 sm:pt-24 sm:justify-end sm:items-end sm:gap-12 lg:pr-12 xl:h-[60vh]'>
@@ -72,7 +71,7 @@ export default function Main() {
 
                 </div>
 
-           
+
 
             </SectionWrapper>
 
@@ -156,7 +155,7 @@ export default function Main() {
                             sectionClassName='2xl:pr-1'
 
                             className='w-full font-semibold flex h-12 flex-col pb-0.5 sm:text-xl 2xl:gap-54 hover:scale-105 transition-transform duration-300 ease-in-out hover:shadow-lg hover:border border-[var(--link)]'
-                            
+
                         >
                             <h3>DATA SCRAPPING</h3>
                             <div className='flex font-light text-sm leading-tight justify-end text-end items-center'>
@@ -193,9 +192,7 @@ export default function Main() {
                 </div>
             </div>
 
-            <div className='absolute 2xl:left-150 top-25 xl:flex hidden  z-20 overflow-visible'>
-                    <Jet />
-                </div>
+            <JetWrapper />
 
         </main>
     )
