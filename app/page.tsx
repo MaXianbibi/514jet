@@ -1,4 +1,3 @@
-import Jet from './Components/3d/Jet';
 import Main from './Components/parts/Main/Main';
 
 export default function Home() {
