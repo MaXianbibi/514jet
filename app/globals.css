@@ -5,7 +5,7 @@
   --box: #F5F5F5;
   --foreground: #1A1A1A;
   --link: #126ce0;
-  --sub: #8792a3;
+  --sub: #25272b;
 }
 /* 
 @theme inline {
@@ -51,3 +51,4 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background-color: #555;  /* Couleur légèrement plus claire quand on passe la souris */
 }
+

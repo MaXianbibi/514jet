@@ -5,6 +5,7 @@ import Link from 'next/link';
 import ArrowOutward from '@/public/svg-arrow-outward.svg'
 import Image from 'next/image';
 import JetWrapper from '../../3d/JetWrapper';
+import WhyUs from '../WhyUs/WhyUs';
 
 
 
@@ -195,7 +196,7 @@ export default function Main() {
             </div>
             <JetWrapper />
 
-
+            <WhyUs/>
         </main>
     )
 }

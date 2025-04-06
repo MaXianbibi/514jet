@@ -1,0 +1,39 @@
+
+#grid-why-us {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        ;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: .5rem;
+}
+
+/* LG */
+@media (min-width: 1024px) {
+    #grid-why-us {
+        grid-template-columns: auto auto;
+
+    }
+}
+
+/* XL */
+@media (min-width: 1280px) {
+    #grid-why-us {
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+}
+
+
+/* Custom class for 3D tilt effect */
+.tilt-3d {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tilt-3d:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateZ(10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
